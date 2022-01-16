@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="form_container">
+    <p>AJOUTER UNE ADDRESSE</p>
+    <form action="" method="POST">
+        <label>Adresse</label>
+        <input name="address"/>
+        <label>Nom</label>
+        <input name="display_name"/>
+        <button type="submit" id="save">Valider</button>
+    </form>
+
+    <p>SUPPRIMER UNE ADDRESSE <br>(par adresse ou par nom)</p>
+    <form action="" method="DELETE">
+        <label>Adresse</label>
+        <input name="address"/>
+        <label>Nom</label>
+        <input name="display_name"/>
+        <button type="submit" id="delete">Supprimer</button>
+    </form>
+</div>
+<style>
+    form
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    .form_container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    input, input:focus
+    {
+        margin-bottom: 5px;
+        background-color: inherit;
+        border: none;
+        border-bottom:white 1px solid;
+        color:white;
+    }
+    button
+    {
+        background-color: inherit;
+        color:white;
+
+        border: white 1px solid;
+    }
+    #delete
+    {
+        border: rgb(255, 154, 136) 1px solid;
+        color:rgb(255, 154, 136);
+    }
+    #save
+    {
+        border: rgb(140, 255, 136) 1px solid;
+        color:rgb(140, 255, 136);
+    }
+</style>
+{% endblock %}

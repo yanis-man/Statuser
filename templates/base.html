@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    {{ turbo() }}
+</head>
+<body>
+    <h3>STATUSER</h3>
+    {%block content %}
+    {% endblock %}
+    {% include "status.html" %}
+</body>
+</html>
+<style>
+    html
+    {
+        background-color: rgb(55, 63, 71);
+        color:rgb(230, 230, 230);
+        display: flex;
+        justify-content: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    body
+    {
+        width: fit-content;
+    }
+</style>

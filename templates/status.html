@@ -1,0 +1,67 @@
+<div id="status_container">
+    {% for status in status_list %}
+       <div class="individual_status">
+           <div class="left_side">
+               <p class="name">{{status[1]}}</p>
+               <p class="ip">{{status[0]}}</p>
+           </div>
+           <div class="righ_side">
+                {% if status[2] %}
+                    <p class="ok">Disponible</p>
+                    <p>{{status[3]}}ms</p>
+                {% else %}
+                    <p class="danger">Indisponible</p>
+                {% endif %}
+           </div>
+       </div>
+    {% endfor %}
+</div>
+
+<style>
+    #status_container
+    {
+        display:flex;
+        flex-direction: column;
+    }
+    .individual_status
+    {
+        display: inherit;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: rgb(70, 82, 94);
+        max-width: 250px;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    .ip
+    {
+        margin-right: 10px;
+        font-size: .9em;
+    }
+    .name
+    {
+        font-weight: bolder;
+    }
+    .ok
+    {
+        color: rgb(77, 216, 130);
+    }
+    .danger
+    {
+        color:lightcoral;
+    }
+    .left_side
+    {
+        display: inherit;
+        flex-direction: column;
+    }
+    .rigth_side
+    {
+        display: inherit;
+        flex-direction: column;
+    }
+    p
+    {
+        margin:5px;
+    }
+</style>
